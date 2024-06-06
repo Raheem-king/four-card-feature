@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primary-color-red: hsl(0, 78%, 62%);
+    --primary-color--cyan: hsl(180, 62%, 55%);
+    --primary-color-Orange: hsl(34, 97%, 64%);
+    --primary-color-blue: hsl(212, 86%, 64%);
+    --neutral-color-very-dark-blue: hsl(234, 12%, 34%);
+    --nuetral-color-grayish-blue: hsl(229, 6%, 66%);
+    --nuetral-color-very-light-gray: hsl(0, 0%, 98%);
+}
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-size: 15px;
+    font-family: poppins;
+    background-color: var(--nuetral-color-very-light-gray);
+}
+
+main{
+    display: grid;
+    row-gap: 1rem;
+    margin: 5rem 0rem;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;    
+    
+}
+
+img{
+    align-self: end;
+    width: 64px;
+    height: 64px;
+}
+
+.bold{
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.container{
+    border-radius: 0.5rem;
+    border: 1px; 
+}
+
+.supervisor{
+    box-shadow: 0px -4px 0 var(--primary-color-blue),
+                0px 0px 1px var(--primary-color-blue);
+}
+
+.team__builder{
+    box-shadow: 0 -4px 0 var(--primary-color-red),
+                0px 0px 1px var(--primary-color-blue);
+}
+
+.karma{
+    box-shadow: 0 -4px 0 var(--primary-color-Orange),
+                0px 0px 1px var(--primary-color-blue);
+}
+
+.calculator{
+    box-shadow: 0 -4px 0 var(--primary-color-blue),
+                0px 0px 1px var(--primary-color-blue);
+}
+
+h1{
+    font-size: 1.45rem;
+    text-align: center;
+}
+
+.reliable{
+    text-align: center;
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+p{
+    color: var(--nuetral-color-grayish-blue);
+}
+
+
+@media(min-width: 600px){
+
+
+ main{
+    margin: 0;
+    row-gap: 0rem;
+   } 
+ .div__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+ }
+
+ .karma{
+    grid-column: 2 / 3;
+ }
+
+ .calculator{
+    grid-column: 3 ;
+    grid-row: 1/ span 2;
+    align-self: center;
+
+ }
+
+ .supervisor{
+   grid-row: span 2;
+   align-self: center;
+ }
+
+.container{
+    margin: 1rem;
+}
+.heading{
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+}
